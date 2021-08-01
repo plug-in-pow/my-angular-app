@@ -1,4 +1,10 @@
 <h1>
-    App Component
+    My App
+    <hr/>
 </h1>
-<app-hello-world [name]='myname'></app-hello-world>
+
+<h2>
+    Hello {{myname}} {{surname}} from App Component
+</h2>
+
+<app-hello-world [name]='myname' (addSurnameEvent)='addSurname($event)'></app-hello-world>

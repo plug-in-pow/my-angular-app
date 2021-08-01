@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-hello-world',
@@ -8,10 +8,16 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 export class HelloWorldComponent implements OnInit {
 
   @Input() name:string = '';
+  @Output() addSurnameEvent = new EventEmitter<string>();
+
+  addSurnameToEvent(value: string){
+    this.addSurnameEvent.emit(value);
+  }
 
   constructor() { }
 
   ngOnInit(): void {
+    this.addSurnameToEvent('Tripathi');
   }
 
 }
