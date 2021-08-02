@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class HelloWorldComponent implements OnInit {
 
-  @Input() name:string = '';
+  @Input() name: string = '';
   @Output() addSurnameEvent = new EventEmitter<string>();
 
   addSurnameToEvent(value: string){
